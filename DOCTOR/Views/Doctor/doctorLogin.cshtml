@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Doctor Login</title>
+</head>
+<body style="text-align:center">
+    <div class="col-sm-3 col-md-6 col-lg-12">
+        @using (Html.BeginForm("doctorLogin", "DoctorController"))
+        {
+            <center>
+                <h2>Doctor Login</h2>
+                <br>
+                <br>
+                <label>Email: <input type="text" name="Username" required></label>
+                <br>
+                <label>Password: <input type="text" name="Password" required></label>
+                <br />
+                <input type="submit" name="SignIn" value="Sign In" />
+            </center>
+        }
+    </div>
+</body>
+</html>

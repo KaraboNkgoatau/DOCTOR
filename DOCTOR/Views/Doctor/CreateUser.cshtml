@@ -1,0 +1,32 @@
+﻿
+@{ViewBag.Title = "CreateUser";
+    Layout = null;
+}
+<h2>Create User</h2>
+@using (Html.BeginForm("CreateUser", "DoctorController"))
+{
+    <center>
+        <label>Name: <input type="text" name="Name" required></label>
+        <br>
+        <label> Surname:<input type="text" name="Surname" required></label>
+        <br>
+        <label>
+            Please Select A User Type:
+            <select required name="UserType">
+                <option value="Student">Student</option>
+                <option value="Admin Staff">Admin Staff</option>
+            </select>
+        </label>
+        <br />
+        <label>Email Address <input type="email" name="Username" required></label>
+        <br>
+        <label>Password: <input type="text" name="Password" required></label>
+        <br>
+        <label>Confirmed Password: <input type="text" name="ConfirmedPassword" required></label>
+        <br>
+        <br>
+        <button type="submit" name="btnSubmit" required value="Submit">Submit</button>
+    </center>
+}
+
+
