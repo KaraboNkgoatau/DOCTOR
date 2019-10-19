@@ -1,0 +1,56 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        body {
+            background-image: url('');
+             margin: 0;
+        }
+    </style>
+    <link href="~/registration.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Doctor Login</title>
+</head>
+<body style="text-align:center">
+    <div class="col-sm-3 col-md-6 col-lg-12">
+        @using (Html.BeginForm("doctorLogin", "Doctor"))
+        {
+        <center>
+            <h2>Doctor Login</h2>
+            <br>
+            <br>
+            <label>Email: <input type="text" name="Username required" ></label>
+            <br>
+            <label>Password: <input type="text" name="Password required" ></label>
+            <br />
+            @*<input type="submit" name="SignIn" value="Sign In" />*@
+            @*@using (Html.BeginForm("CreateUser", "Doctor"))
+            {
+                <input type="submit" name="Create Account" value="Create Account" />
+            }*@
+          @Html.ActionLink("Create User", "CreateUser", "Doctor", null, new { @class = "btn btn - primary" })
+
+          @Html.ActionLink("Sign In", "Upload", "Doctor", null, new { @class = "btn btn-primary" })
+            
+        </center>
+        }
+    </div>
+</body>
+</html>

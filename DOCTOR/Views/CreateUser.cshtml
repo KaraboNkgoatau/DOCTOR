@@ -1,0 +1,54 @@
+﻿
+@{ViewBag.Title = "CreateUser";
+    Layout = null;
+}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="~/registration.css" rel="stylesheet" />
+</head>
+<style type="text/css">
+    body {
+        background-image: url('');
+        margin: 0;
+    }
+</style>
+
+
+@using (Html.BeginForm("CreateUser", "DoctorController"))
+{
+    <center>
+        <h2>Create User</h2>
+        <label c>Name: <input type="text" name="Name" required></label>
+        <br>
+        <label> Surname:<input type="text" name="Surname" required></label>
+        <br>
+        <label>
+            Please Select A User Type:
+            <select required name="UserType">
+                <option value="Doctor">Doctor</option>
+                <option value="Doctor">Nurse</option>
+            </select>
+        </label>
+        <br />
+        <label>Email Address <input type="email" name="Username" required></label>
+        <br>
+        <label>Password: <input type="text" name="Password" required></label>
+        <br>
+        <label>Confirmed Password: <input type="text" name="ConfirmedPassword" required></label>
+        <br>
+        <br>
+        <button type="submit" name="btnSubmit" required value="Submit">Submit</button>
+    </center>
+}
+
+
