@@ -1,3 +1,20 @@
-﻿{
+﻿[
+  {
+    "Doctor_Name": "Karabo",
+    "Doctor_Surname": "Nkgoatau",
+    "DoctorID": "first"
+  },
 
-}
+  {
+    "DoctorID": "second",
+    "Doctor_Name": "Potego",
+    "Doctor_Surname": "Modiba"
+  },
+  {
+    "DoctorID": "Third",
+    "Doctor_Name": "Oarabile",
+    "Doctor_Surname": "Kau"
+  }
+]
+ 
+
